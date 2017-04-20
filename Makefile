@@ -18,7 +18,7 @@ geometry_test: geometry_test.o geometry.o
 
 geometry_test.o: geometry_test.c geometry.h
 	$(CC) $(CFLAGS) $< -o $@
-
+	
 geometry.o: geometry.c geometry.h
 	$(CC) $(CFLAGS) $< -o $@
 
@@ -29,3 +29,6 @@ clean:
 	$(RM) *.o
 	$(RM) geometry_test
 	$(RM) *~
+
+test: geometry_test
+	./geometry_test

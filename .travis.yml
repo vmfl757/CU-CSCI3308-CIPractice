@@ -1,9 +1,9 @@
-install: make get-deps
+install: make dep
 
 language: c
 
 script: scons
 
-compiler: clang
+compiler: gcc
 
 sudo: required
